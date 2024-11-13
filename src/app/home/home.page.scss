@@ -1,27 +1,34 @@
-#container {
+ion-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #fce4ec; /* Fondo rosado pastel claro */
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px; /* Ajuste para dispositivos móviles */
+  padding: 20px;
+}
+
+.custom-card {
+  background-color: #ffb6c1; /* Color rosado pastel */
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease; /* Transición suave */
+  width: 100%; /* Usar todo el ancho del contenedor */
+}
+
+.custom-card:hover {
+  transform: scale(1.05); /* Efecto de agrandamiento al pasar el ratón */
+}
+
+ion-card-title {
+  font-size: 1.2em;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
 }

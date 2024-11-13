@@ -1,0 +1,9 @@
+<ion-content class="modal-content">
+  <div class="alert-container">
+    <div class="resultado-container">
+      <p>La nota mínima necesaria es: {{ notaMinima?.toFixed(2) }}</p>
+      <img [src]="gifUrl" alt="Resultado" class="resultado-gif">
+      <ion-button fill="clear" (click)="cerrarModal()">Cerrar</ion-button>
+    </div>
+  </div>
+</ion-content>

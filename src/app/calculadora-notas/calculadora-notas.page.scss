@@ -1,0 +1,144 @@
+:host {
+    --ion-color-primary: #ffb6c1;  /* Rosa pastel para botones */
+    --ion-color-primary-rgb: 255, 182, 193;
+  }
+  ion-header {
+    --background: #f8f8f8;
+  }
+  
+  ion-title {
+    text-align: center;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  ion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo más suave */
+  }
+  
+  form {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 500px; /* Limita el ancho del formulario */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre los elementos */
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  ion-item {
+    --background: transparent; /* Elimina el fondo blanco */
+  --border-color: transparent; /* Elimina el borde */
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  ion-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333; /* Color más oscuro para el texto */
+  }
+  
+  ion-input {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  ion-button {
+    --background: #ffb6c1;
+    --color: white;
+    --border-radius: 8px;
+    --font-size: 1.1rem;
+    --padding-start: 20px;
+    --padding-end: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  ion-button:hover {
+    --background: #ff80a1;  /* Color más oscuro para hover */
+  }
+  
+  #resultado {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  #resultado h2 {
+    color: #333;
+    font-weight: 600;
+  }
+  
+  #resultado p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff80a1;  /* Rosa más oscuro para la nota mínima */
+  }
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  ion-button[disabled] {
+    background-color: #ffb6c1;
+  }
+  /* Estilos para la tarjeta de cada nota */
+.nota-card {
+    background-color: #ffb6c1; /* Rosado pastel */
+    border-radius: 12px;
+    margin-bottom: 20px; /* Espacio entre tarjetas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  ion-card-header {
+    background-color: #ffb6c1; /* Fondo rosado más fuerte para el encabezado */
+    color: #ffb6c1;
+    padding: 10px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  
+  ion-card-title {
+    font-weight: bold;
+  }
+  
+  ion-card-content {
+    padding: 20px;
+  }
+  
+  ion-item {
+    margin-bottom: 15px; /* Espacio entre campos dentro de la tarjeta */
+  }
+  
+  ion-label {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  ion-input {
+    margin-top: 5px;
+  }
+  .custom-alert .alert-message {
+    text-align: center;
+  }
+  
+  
+
+  
