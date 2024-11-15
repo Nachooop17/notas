@@ -32,3 +32,10 @@ ion-card-title {
   font-size: 1.2em;
   text-align: center;
 }
+.version-label {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 0.8em;
+  color: #888; /* Puedes cambiar el color si prefieres otro */
+}

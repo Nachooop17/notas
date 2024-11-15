@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/home">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        Volver
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="text-center">Calculadora de Promedio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="calcularPromedio()" #notaForm="ngForm">
+    <div class="form-group" *ngFor="let nota of notas; let i = index">
+      <ion-card class="nota-card">
+        <ion-card-header>
+          <ion-card-title>Nota {{i + 1}}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <ion-item>
+            <ion-label>Nota:</ion-label>
+            <ion-input type="number" [(ngModel)]="nota.valor" 
+                       (ngModelChange)="validarNotas()" 
+                       name="nota{{i}}" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Ponderación:</ion-label>
+            <ion-input type="number" [(ngModel)]="nota.peso" 
+                       (ngModelChange)="validarNotas()" 
+                       name="peso{{i}}" required placeholder="%"></ion-input>
+          </ion-item>
+
+          <div *ngIf="errores.notaInvalida" class="error-message">
+            <p>La nota debe estar entre 1 y 7.</p>
+          </div>
+          <div *ngIf="errores.pesoInvalido" class="error-message">
+            <p>El peso debe ser un número entre 1 y 100.</p>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <ion-button expand="full" (click)="agregarNota()">Agregar Nota</ion-button>
+
+    <ion-button expand="full" type="submit" 
+                 [disabled]="errores.notaInvalida || errores.pesoInvalido || errores.sumaPesosExcede">
+      Calcular Promedio
+    </ion-button>
+  </form>
+
+  <!-- Mensaje si la suma de los pesos excede 100% -->
+  <div *ngIf="errores.sumaPesosExcede" class="error-message">
+    <p>La suma de los pesos no puede ser igual o superior al 100%.</p>
+  </div>
+</ion-content>

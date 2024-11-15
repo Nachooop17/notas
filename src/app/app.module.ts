@@ -6,9 +6,9 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ResultadoNotaComponent } from './resultado-nota/resultado-nota.component';
+
 @NgModule({
-  declarations: [AppComponent, ResultadoNotaComponent],
+  declarations: [AppComponent, ],
   
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

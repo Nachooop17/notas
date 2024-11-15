@@ -17,6 +17,10 @@ const routes: Routes = [
   {
     path: 'calculadora-notas',
     loadChildren: () => import('./calculadora-notas/calculadora-notas.module').then( m => m.CalculadoraNotasPageModule)
+  },
+  {
+    path: 'calculadora-promedio',
+    loadChildren: () => import('./calculadora-promedio/calculadora-promedio.module').then( m => m.CalculadoraPromedioPageModule)
   }
 ];
 

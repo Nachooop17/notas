@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AlertController, ModalController } from '@ionic/angular';
-import { ResultadoNotaComponent } from '../resultado-nota/resultado-nota.component';
+import { AlertController} from '@ionic/angular';
+
 
 @Component({
   selector: 'app-calculadora-notas',
@@ -20,7 +20,7 @@ export class CalculadoraNotasPage {
     sumaPesosExcede: false
   };
 
-  constructor(private modalController: ModalController) {} // Inyecta AlertController en el constructor
+  constructor(private alertController: AlertController) {} // Inyecta AlertController en el constructor
 
   agregarNota() {
     this.notas.push({ valor: '', peso: '' });
@@ -75,29 +75,27 @@ export class CalculadoraNotasPage {
     }
 
     // Mostrar la alerta después de calcular la nota
-    this.presentModal();
+    this.presentAlert();
   }
 
-  async presentModal() {
+  async presentAlert() {
     if (this.notaMinima === null) return;
   
     const gifUrl = this.notaMinima >= 4
       ? 'assets/images/success-gif.gif'
       : 'assets/images/fail-gif.gif';
   
-    const modal = await this.modalController.create({
-      component: ResultadoNotaComponent,
-      componentProps: {
-        notaMinima: this.notaMinima,
-        gifUrl: gifUrl
-      },
-      cssClass: 'custom-modal-alert',  // Aplica la clase personalizada
-      backdropDismiss: true,  // Permite cerrar el modal tocando fuera de él
-      animated: true  // Asegura animaciones suaves
+    const alert = await this.alertController.create({
+      header: 'Resultado',
+      message: `
+        La nota mínima necesaria es: ${this.notaMinima.toFixed(2)}`,
+      buttons: ['OK'],
+      cssClass: 'custom-alert'
     });
   
-    await modal.present();
+    await alert.present();
   }
+  
   
   
 }
